@@ -159,4 +159,22 @@ h1#logo {
     flex-basis: 45%;
     text-align: left;
   }
+
+/* Page Title and Subtitle displayed inline */
+
+  #main_content {
+    display: flex;
+    /*justify-content: space-between;*/
+  }
+
+  #main_content div:nth-child(1) {
+    width: 60%;
+    margin: 0px 20px;
+  }
+
+  #main_content div:nth-child(2) {
+    width: 30%;
+    margin: 0px 10px;
+  }
+
 }
