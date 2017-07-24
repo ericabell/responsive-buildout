@@ -97,7 +97,7 @@ h1#logo {
 #sidebar_content div {
   background-color: #ffffdd;
   padding: 5px 20px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 5px;
 }
 
@@ -106,6 +106,7 @@ h1#logo {
   padding: 10px;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
 }
 
 #site_footer a {
@@ -129,11 +130,16 @@ h1#logo {
 /* sidebar content should be side by side and not block */
 #sidebar_content {
   display: flex;
+
+  margin: 10px 5px;
 }
 
 #sidebar_content div {
   flex-basis: 30%;
   justify-content: space-around;
+  padding: 5px 20px;
+  border-radius: 0px;
+  margin: 0px;
 }
 
 } /* tablet 600px
