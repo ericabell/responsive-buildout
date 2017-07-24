@@ -125,6 +125,17 @@ h1#logo {
     margin: 0px 5px;
     justify-content: space-around;
   }
+
+/* sidebar content should be side by side and not block */
+#sidebar_content {
+  display: flex;
+}
+
+#sidebar_content div {
+  flex-basis: 30%;
+  justify-content: space-around;
+}
+
 } /* tablet 600px
 
 
