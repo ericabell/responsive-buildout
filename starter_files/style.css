@@ -130,7 +130,6 @@ h1#logo {
 /* sidebar content should be side by side and not block */
 #sidebar_content {
   display: flex;
-
   margin: 10px 5px;
 }
 
@@ -164,9 +163,9 @@ h1#logo {
 
   #main_content {
     display: flex;
-    /*justify-content: space-between;*/
   }
 
+/* since the two div's are siblings without id's, use n-th child */
   #main_content div:nth-child(1) {
     width: 60%;
     margin: 0px 20px;
