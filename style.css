@@ -1,0 +1,179 @@
+/*
+
+    COLORS
+
+    Pink   : #ffdddd
+    Purple : #ddddff
+    Green  : #ddffdd
+    Blue   : #ddffff
+    Yellow : #ffffdd
+
+    BREAKPOINTS
+
+    600px
+    1100px
+
+*/
+
+body{
+    font-family: Palatino, Times, serif;
+    background-color: #ddffdd;
+    margin: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+ul{
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+h1, h2, h3{
+    color: #009999;
+}
+
+h2, h3{
+    margin-bottom: 0;
+}
+
+a{
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+a:hover{
+    color: blue;
+}
+
+header{
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddddff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1#logo {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+#site_container{
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#main_nav{
+    text-align: center;
+    flex-basis: 100%;
+    flex-direction: row;
+}
+
+#main_nav a{
+    display: block;
+    padding: 10px 2%;
+    background: #ffdddd;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#main_nav a:hover{
+    background: #ddddff;
+}
+
+#main_content {
+  background-color: #ddffff;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#sidebar_content div {
+  background-color: #ffffdd;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+#site_footer {
+  background-color: rgb(255,	213,	146	);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+#site_footer a {
+  margin: 0px 10px;
+}
+
+
+/*TABLET MEDIA QUERY*/
+@media screen and (min-width: 600px) {
+/* LOGO in first line, centered, three nav buttons on next line inline */
+#main_nav {
+  display: flex;
+}
+
+#main_nav a{
+    flex-basis: 30%;
+    margin: 0px 5px;
+    justify-content: space-around;
+  }
+
+/* sidebar content should be side by side and not block */
+#sidebar_content {
+  display: flex;
+  margin: 10px 5px;
+}
+
+#sidebar_content div {
+  flex-basis: 30%;
+  justify-content: space-around;
+  padding: 5px 20px;
+  border-radius: 0px;
+  margin: 0px;
+}
+
+} /* tablet 600px
+
+
+/*DESKTOP MEDIA QUERY*/
+@media screen and (min-width: 1100px) {
+/* LOGO and nav buttons all in same row */
+  header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  h1#logo {
+    flex-basis: 45%;
+    text-align: left;
+  }
+
+/* Page Title and Subtitle displayed inline */
+
+  #main_content {
+    display: flex;
+  }
+
+/* since the two div's are siblings without id's, use n-th child */
+  #main_content div:nth-child(1) {
+    width: 60%;
+    margin: 0px 20px;
+  }
+
+  #main_content div:nth-child(2) {
+    width: 30%;
+    margin: 0px 10px;
+  }
+
+}
